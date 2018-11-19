@@ -1,0 +1,60 @@
+﻿@model IEnumerable<FrotaSisWeb.Models.SisModels.SisMarcas>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h2>Index</h2>
+
+            <p>
+                <a asp-action="Create">Create New</a>
+            </p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DescMarca)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Usacadmat)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Usacadveic)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Ativo)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DescMarca)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Usacadmat)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Usacadveic)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Ativo)
+                            </td>
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@item.IdMarca">Edit</a> |
+                                <a asp-action="Details" asp-route-id="@item.IdMarca">Details</a> |
+                                <a asp-action="Delete" asp-route-id="@item.IdMarca">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
