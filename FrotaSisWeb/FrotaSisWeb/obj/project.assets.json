@@ -12433,11 +12433,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\AspNetProjetos\\FrotaSisWeb\\FrotaSisWeb\\FrotaSisWeb.csproj",
+      "projectUniqueName": "D:\\AspNetProjetos\\SistemaFrotaWeb\\FrotaSisWeb\\FrotaSisWeb\\FrotaSisWeb.csproj",
       "projectName": "FrotaSisWeb",
-      "projectPath": "D:\\AspNetProjetos\\FrotaSisWeb\\FrotaSisWeb\\FrotaSisWeb.csproj",
+      "projectPath": "D:\\AspNetProjetos\\SistemaFrotaWeb\\FrotaSisWeb\\FrotaSisWeb\\FrotaSisWeb.csproj",
       "packagesPath": "C:\\Users\\adeil\\.nuget\\packages\\",
-      "outputPath": "D:\\AspNetProjetos\\FrotaSisWeb\\FrotaSisWeb\\obj\\",
+      "outputPath": "D:\\AspNetProjetos\\SistemaFrotaWeb\\FrotaSisWeb\\FrotaSisWeb\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

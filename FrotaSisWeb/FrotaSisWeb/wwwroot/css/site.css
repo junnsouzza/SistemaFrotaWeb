@@ -1,19 +1,35 @@
 ﻿/*Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
 for details on configuring this project to bundle and minify static web assets. */
 
-*{
+body{
     margin: 0;
     padding: 0;
 }
 
-html{
-   
+#mainArea {
+    display: grid;
+    grid-template-columns: 220px calc(100% - 220px);
+    grid-template-rows: 56px calc(100vh - 56px);     
+    grid-template-areas: "header header" "sidenav content" "footer footer";
 }
 
-body {
-    
+.mainHeader{
+    grid-area: header;
 }
 
+.mainAside{
+    grid-area: sidenav;
+    background: #202286;
+}
+
+.mainContent{
+    grid-area: content;   
+}
+
+.mainFooter{
+    grid-area: footer;
+    background: gray;     
+}
 
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
@@ -54,27 +70,24 @@ ul{
     list-style: none;
 }
 
-
+.top-site{
+    
+}
 
 .meio-site {
-    height: 100rem;
-    clear: both;
+    /*height: calc(100% - 56px);
+    position: relative;
+    top: 56px;
+    left: 0;
+    clear: both;*/
 }
 
 .barra-lateral {
-    width: 250px;
-    height: 100rem;
-    margin-right: 10px;
-    border-top: 2px solid;
-    border-color: antiquewhite;
-    float: left;
-    background: #0f3268;    
+    
 }
 
-.conteudo {
-    height: 100rem;
-    background: #F0F3F5;
-    clear: right;
+.conteudo {    
+     
 }
 
 .conteudo-site{
@@ -91,7 +104,10 @@ ul{
 }
 
 .rodape-site{
-    clear: both;
+   
 }
 
+.auto-overflow {
+    overflow: auto;
+}
 

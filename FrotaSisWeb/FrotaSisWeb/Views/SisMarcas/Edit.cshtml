@@ -4,58 +4,55 @@
     ViewData["Title"] = "Edit";
 }
 
-<h3>Cadastro de Marcas</h3>
 
+<div class="container">
+    <h3>Cadastro de Marcas</h3>
 
-<div class="">
-    <div class="">
-        <div class="card" style="width: 35rem">
-            <div class="card-header">
-                <h5>Editar Marca</h5>
-            </div>
-            <div class="card-body">
-                <div class="">
-                    <form asp-action="Edit">
-                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                        <div class="form-group form-row">
-                            <div class="col-md-2">
-                                <label asp-for="IdMarca" class="control-label">Id</label>
-                                <input class="form-control form-control-sm" type="text" asp-for="IdMarca" readonly />
-                            </div>
-                            <div class="col-md-10">
-                                <label asp-for="DescMarca" class="control-label">Descrição</label>
-                                <input asp-for="DescMarca" class="form-control form-control-sm" />
-                                <span asp-validation-for="DescMarca" class="text-danger"></span>
-                            </div>
+    <div class="card" style="width: 35rem">
+        <div class="card-header">
+            <h5>Editar Marca</h5>
+        </div>
+        <div class="card-body">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group form-row">
+                    <div class="col-md-2">
+                        <label asp-for="IdMarca" class="control-label">Id</label>
+                        <input class="form-control form-control-sm" type="text" asp-for="IdMarca" readonly />
+                    </div>
+                    <div class="col-md-10">
+                        <label asp-for="DescMarca" class="control-label">Descrição</label>
+                        <input asp-for="DescMarca" class="form-control form-control-sm" />
+                        <span asp-validation-for="DescMarca" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="Usacadmat" /> @Html.DisplayNameFor(model => model.Usacadmat)
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <div class="checkbox">
+                            <label class="form-check-label">
+                                <input class="form-check-input" asp-for="Usacadveic" /> @Html.DisplayNameFor(model => model.Usacadveic)
+                            </label>
                         </div>
-                        <div class="form-group">
-                            <div class="form-check form-check-inline">
-                                <label class="form-check-label">
-                                    <input class="form-check-input" asp-for="Usacadmat" /> @Html.DisplayNameFor(model => model.Usacadmat)
-                                </label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <div class="checkbox">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" asp-for="Usacadveic" /> @Html.DisplayNameFor(model => model.Usacadveic)
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <div class="checkbox">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" asp-for="Ativo" /> @Html.DisplayNameFor(model => model.Ativo)
-                                    </label>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <div class="checkbox">
+                            <label class="form-check-label">
+                                <input class="form-check-input" asp-for="Ativo" /> @Html.DisplayNameFor(model => model.Ativo)
+                            </label>
                         </div>
-                        <input type="submit" value="Salvar" class="btn btn-primary" />
-                    </form>
-                </div>                
-            </div>   
-            <div class="card-footer t">
-                <a asp-action="Index">Voltar para o Cadastro</a>
-            </div>
+                    </div>
+                </div>
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+            </form>
+        </div>
+
+        <div class="card-footer">
+            <a asp-action="Index">Voltar para o Cadastro</a>
         </div>
     </div>
 </div>
