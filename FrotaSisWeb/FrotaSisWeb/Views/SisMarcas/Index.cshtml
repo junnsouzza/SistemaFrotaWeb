@@ -10,8 +10,8 @@
         <p>
             <a asp-action="Create">Create New</a>
         </p>
-        <div class="table-responsive">
-            <table class="table table-sm table-striped table-hover">
+        <div class="">
+            <table class="table table-sm table-bordered table-hover">
                 <thead>
                     <tr>
                         <th>
@@ -46,9 +46,9 @@
                                 @Html.DisplayFor(modelItem => item.Ativo)
                             </td>
                             <td>
-                                <a asp-action="Edit" asp-route-id="@item.IdMarca">Edit</a> |
-                                <a asp-action="Details" asp-route-id="@item.IdMarca">Details</a> |
-                                <a asp-action="Delete" asp-route-id="@item.IdMarca">Delete</a>
+                                <a class="btn btn-sm btn-outline-success" asp-action="Edit" asp-route-id="@item.IdMarca">Editar</a> 
+                                <a class="btn btn-sm btn-outline-info" asp-action="Details" asp-route-id="@item.IdMarca">Visualizar</a>
+                                <a class="btn btn-sm btn-outline-danger" asp-action="Delete" asp-route-id="@item.IdMarca">Excluir</a>
                             </td>
                         </tr>
                     }
