@@ -54,7 +54,6 @@ D:\AspNetProjetos\SistemaFrotaWeb\FrotaSisWeb\FrotaSisWeb\obj\Debug\netcoreapp2.
 D:\AspNetProjetos\SistemaFrotaWeb\FrotaSisWeb\FrotaSisWeb\obj\Debug\netcoreapp2.1\FrotaSisWeb.csproj.CoreCompileInputs.cache
 D:\AspNetProjetos\SistemaFrotaWeb\FrotaSisWeb\FrotaSisWeb\obj\Debug\netcoreapp2.1\FrotaSisWeb.RazorAssemblyInfo.cache
 D:\AspNetProjetos\SistemaFrotaWeb\FrotaSisWeb\FrotaSisWeb\obj\Debug\netcoreapp2.1\FrotaSisWeb.RazorAssemblyInfo.cs
-D:\AspNetProjetos\SistemaFrotaWeb\FrotaSisWeb\FrotaSisWeb\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
 D:\AspNetProjetos\SistemaFrotaWeb\FrotaSisWeb\FrotaSisWeb\obj\Debug\netcoreapp2.1\FrotaSisWeb.AssemblyInfoInputs.cache
 D:\AspNetProjetos\SistemaFrotaWeb\FrotaSisWeb\FrotaSisWeb\obj\Debug\netcoreapp2.1\FrotaSisWeb.AssemblyInfo.cs
 D:\AspNetProjetos\SistemaFrotaWeb\FrotaSisWeb\FrotaSisWeb\obj\Debug\netcoreapp2.1\FrotaSisWeb.TagHelpers.input.cache
@@ -88,3 +87,4 @@ D:\AspNetProjetos\SistemaFrotaWeb\FrotaSisWeb\FrotaSisWeb\obj\Debug\netcoreapp2.
 D:\AspNetProjetos\SistemaFrotaWeb\FrotaSisWeb\FrotaSisWeb\obj\Debug\netcoreapp2.1\FrotaSisWeb.dll
 D:\AspNetProjetos\SistemaFrotaWeb\FrotaSisWeb\FrotaSisWeb\obj\Debug\netcoreapp2.1\FrotaSisWeb.pdb
 D:\AspNetProjetos\SistemaFrotaWeb\FrotaSisWeb\FrotaSisWeb\obj\Debug\netcoreapp2.1\FrotaSisWeb.csproj.CopyComplete
+D:\AspNetProjetos\SistemaFrotaWeb\FrotaSisWeb\FrotaSisWeb\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs

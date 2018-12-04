@@ -46,8 +46,8 @@
                                 @Html.DisplayFor(modelItem => item.Ativo)
                             </td>
                             <td>
-                                <a class="btn btn-sm btn-outline-success" asp-action="Edit" asp-route-id="@item.IdMarca">Editar</a> 
-                                <a class="btn btn-sm btn-outline-info" asp-action="Details" asp-route-id="@item.IdMarca">Visualizar</a>
+                                <a class="btn btn-sm btn-outline-success" asp-action="Edit" asp-route-id="@item.IdMarca">Editar</a>
+                                <a class="btn btn-sm btn-outline-info" data-toggle="modal" data-modal="@item.IdMarca" data-target="#myModal" asp-action="Details" asp-route-id="@item.IdMarca">Visualizar</a>
                                 <a class="btn btn-sm btn-outline-danger" asp-action="Delete" asp-route-id="@item.IdMarca">Excluir</a>
                             </td>
                         </tr>
@@ -57,3 +57,21 @@
         </div>
     </div>
 </div>
+
+<!-- modal placeholder-->
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div id="myModalContent"></div>
+        </div>
+    </div>
+</div>
+
+@section scripts
+{
+    <script src="~/js/Appjs/Marcas.js" asp-append-version="true"></script>
+}
+
+
+
+

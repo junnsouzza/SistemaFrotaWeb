@@ -24,7 +24,7 @@ namespace FrotaSisWeb.Models.SisModels
             if (!optionsBuilder.IsConfigured)
             {/*
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Data Source=DESKTOP-HRMES0O;Initial Catalog=G3DBS;User ID=g3;Password=g3sql@_2016");
+                optionsBuilder.UseSqlServer("Data Source=DESKT...-HRMES0O;Initial Catalog=G3DBSsssss;User ID=g3333;Password=g3sql@_2016");
                 */
             }
         }

@@ -84,7 +84,7 @@ using FrotaSisWeb.Models;
             WriteLiteral("\r\n        </dd>\r\n    </dl>\r\n</div>\r\n<div>\r\n    ");
             EndContext();
             BeginContext(379, 56, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "23ed5dc6e66b413da121919835a9b4fe", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "873d12b35ba14a5ead04f93d6cb63316", async() => {
                 BeginContext(427, 4, true);
                 WriteLiteral("Edit");
                 EndContext();
@@ -119,7 +119,7 @@ using FrotaSisWeb.Models;
             WriteLiteral(" |\r\n    ");
             EndContext();
             BeginContext(443, 38, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fe7a9844e7024d25b78840da7da0df46", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "408c8e65b01342d9abc144c06141c4fe", async() => {
                 BeginContext(465, 12, true);
                 WriteLiteral("Back to List");
                 EndContext();
