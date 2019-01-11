@@ -26,7 +26,7 @@ namespace FrotaSisWeb.Controllers
         }
 
         // GET: SisMarcas/Details/5
-        public async Task<IActionResult> Details(decimal? id)
+        public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
             {
@@ -66,7 +66,7 @@ namespace FrotaSisWeb.Controllers
         }
 
         // GET: SisMarcas/Edit/5
-        public async Task<IActionResult> Edit(decimal? id)
+        public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
             {
@@ -86,7 +86,7 @@ namespace FrotaSisWeb.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(decimal id, [Bind("IdMarca,DescMarca,Usacadmat,Usacadveic,Ativo")] SisMarcas sisMarcas)
+        public async Task<IActionResult> Edit(int id, [Bind("IdMarca,DescMarca,Usacadmat,Usacadveic,Ativo")] SisMarcas sisMarcas)
         {
             if (id != sisMarcas.IdMarca)
             {
@@ -117,7 +117,7 @@ namespace FrotaSisWeb.Controllers
         }
 
         // GET: SisMarcas/Delete/5
-        public async Task<IActionResult> Delete(decimal? id)
+        public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
             {
@@ -137,7 +137,7 @@ namespace FrotaSisWeb.Controllers
         // POST: SisMarcas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(decimal id)
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var sisMarcas = await _context.SisMarcas.FindAsync(id);
             _context.SisMarcas.Remove(sisMarcas);
@@ -145,7 +145,7 @@ namespace FrotaSisWeb.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool SisMarcasExists(decimal id)
+        private bool SisMarcasExists(int id)
         {
             return _context.SisMarcas.Any(e => e.IdMarca == id);
         }

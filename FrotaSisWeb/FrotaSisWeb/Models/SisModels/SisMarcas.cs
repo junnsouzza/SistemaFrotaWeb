@@ -6,7 +6,7 @@ namespace FrotaSisWeb.Models.SisModels
 {
     public partial class SisMarcas
     {
-        public decimal IdMarca { get; set; }
+        public int IdMarca { get; set; }
         public string DescMarca { get; set; }
 
         [Display(Name = "Cadastro de Materiais")]

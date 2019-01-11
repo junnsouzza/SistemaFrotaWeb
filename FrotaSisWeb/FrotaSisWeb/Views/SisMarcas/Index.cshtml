@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<FrotaSisWeb.Models.SisModels.SisMarcas>
+@using FrotaSisWeb.Models
 
 @{
     ViewData["Title"] = "Index";
@@ -7,13 +8,16 @@
 <div class="">
     <div class="col-12">
         <h4>Cadastro de Marcas</h4>
-        <p>
+        <p class="btn btn-primary btn-sm">
             <a asp-action="Create">Create New</a>
         </p>
         <div class="">
             <table class="table table-sm table-bordered table-hover">
                 <thead>
                     <tr>
+                        <th>
+                           @Html.DisplayNameFor(model => model.IdMarca)
+                        </th>
                         <th>
                             @Html.DisplayNameFor(model => model.DescMarca)
                         </th>
@@ -26,13 +30,18 @@
                         <th>
                             @Html.DisplayNameFor(model => model.Ativo)
                         </th>
-                        <th></th>
+                        <th>
+                            Opções
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach (var item in Model)
                     {
                         <tr>
+                            <td>
+                                @Html.DisplayFor(modelIem => item.IdMarca)
+                            </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.DescMarca)
                             </td>
@@ -47,7 +56,9 @@
                             </td>
                             <td>
                                 <a class="btn btn-sm btn-outline-success" asp-action="Edit" asp-route-id="@item.IdMarca">Editar</a>
-                                <a class="btn btn-sm btn-outline-info" data-toggle="modal" data-modal="@item.IdMarca" data-target="#myModal" asp-action="Details" asp-route-id="@item.IdMarca">Visualizar</a>
+                                <!--<a class="btn btn-sm btn-outline-info" data-toggle="modal" data-modal="@item.IdMarca" data-target="#myModal" asp-action="Details" asp-route-id="@item.IdMarca">Visualizar</a>-->
+                                <a href="#" class="btn btn-sm btn-outline-info btnDetails" data-value="@item.IdMarca">Detalhes01</a>
+                                <!--<a class="btn btn-sm btn-outline-info" data-toggle="modal" data-modal="@item.IdMarca" data-target="#myModal2" asp-action="Details" asp-route-id="@item.IdMarca">Detalhes02</a>-->
                                 <a class="btn btn-sm btn-outline-danger" asp-action="Delete" asp-route-id="@item.IdMarca">Excluir</a>
                             </td>
                         </tr>
@@ -58,18 +69,49 @@
     </div>
 </div>
 
-<!-- modal placeholder-->
+<!-- modal placeholder -->
 <div id="myModal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div id="myModalContent"></div>
+            <div class="modal-body">
+                <div id="myModalContent"></div>
+            </div>
         </div>
     </div>
 </div>
 
-@section scripts
-{
-    <script src="~/js/Appjs/Marcas.js" asp-append-version="true"></script>
+<!-- Modal -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                Marca - Detalhes
+            </div>
+            <div class="modal-body">
+                <div id="conteudoModal"></div>
+            </div>  
+            <div class="modal-footer">                
+                <a asp-action="Index" class="btn btn-light">Fechar</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/js/Appjs/Modal.js" asp-append-version="true"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".btnDetails").click(function () {
+                var id = $(this).data("value");
+                $("#conteudoModal").load("/SisMarcas/Details/" + id,
+                    function () {
+                        $('#myModal2').modal('show');
+                    }
+                );
+            })
+        })
+    </script>
 }
 
 
