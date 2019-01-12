@@ -16,7 +16,7 @@
                 <thead>
                     <tr>
                         <th>
-                           @Html.DisplayNameFor(model => model.IdMarca)
+                            @Html.DisplayNameFor(model => model.IdMarca)
                         </th>
                         <th>
                             @Html.DisplayNameFor(model => model.DescMarca)
@@ -59,7 +59,7 @@
                                 <!--<a class="btn btn-sm btn-outline-info" data-toggle="modal" data-modal="@item.IdMarca" data-target="#myModal" asp-action="Details" asp-route-id="@item.IdMarca">Visualizar</a>-->
                                 <a href="#" class="btn btn-sm btn-outline-info btnDetails" data-value="@item.IdMarca">Detalhes01</a>
                                 <!--<a class="btn btn-sm btn-outline-info" data-toggle="modal" data-modal="@item.IdMarca" data-target="#myModal2" asp-action="Details" asp-route-id="@item.IdMarca">Detalhes02</a>-->
-                                <a class="btn btn-sm btn-outline-danger" asp-action="Delete" asp-route-id="@item.IdMarca">Excluir</a>
+                                <a class="btn btn-sm btn-outline-danger" data-id="@item.IdMarca" asp-action="Delete" asp-route-id="@item.IdMarca">Excluir</a>
                             </td>
                         </tr>
                     }
@@ -80,7 +80,7 @@
     </div>
 </div>
 
-<!-- Modal -->
+<!-- Modal
 <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -89,12 +89,18 @@
             </div>
             <div class="modal-body">
                 <div id="conteudoModal"></div>
-            </div>  
-            <div class="modal-footer">                
+            </div>
+            <div class="modal-footer">
                 <a asp-action="Index" class="btn btn-light">Fechar</a>
             </div>
         </div>
     </div>
+</div>
+-->
+
+<!-- Modal -->
+<div class="modal fade" id="myModal2">
+    
 </div>
 
 @section scripts{
@@ -104,7 +110,7 @@
         $(document).ready(function () {
             $(".btnDetails").click(function () {
                 var id = $(this).data("value");
-                $("#conteudoModal").load("/SisMarcas/Details/" + id,
+                $("#myModal2").load("/SisMarcas/Details/" + id,
                     function () {
                         $('#myModal2').modal('show');
                     }
