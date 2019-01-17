@@ -131,7 +131,7 @@ namespace FrotaSisWeb.Controllers
                 return NotFound();
             }
 
-            return View(sisMarcas);
+            return PartialView(sisMarcas);
         }
 
         // POST: SisMarcas/Delete/5

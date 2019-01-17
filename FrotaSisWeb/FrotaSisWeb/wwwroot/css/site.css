@@ -111,3 +111,15 @@ ul{
     overflow: auto;
 }
 
+/*Configuração dos ícones utilizados do GlyphIcon*/
+
+.si-glyph * {
+    fill: red;
+    width: 16px;
+    height: 16px;
+}
+
+.glyph-icon svg {
+    width: 16px;
+    height: 16px;
+}

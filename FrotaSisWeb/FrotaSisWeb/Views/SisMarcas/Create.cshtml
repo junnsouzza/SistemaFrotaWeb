@@ -4,63 +4,62 @@
     ViewData["Title"] = "Create";
 }
 
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-12">
-            <h2>Create</h2>
-
-            <h4>SisMarcas</h4>
-            <hr />
-            <div class="row">
-                <div class="col-md-4">
-                    <form asp-action="Create">
-                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                        <div class="form-group">
-                            <label asp-for="IdMarca" class="control-label"></label>
-                            <input asp-for="IdMarca" class="form-control"/>
+<div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a asp-action="Index">Marcas</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Incluir Marca</li>
+        </ol>
+    </nav>
+    <div class="container-fluid">
+        <div class="card" style="width: 35rem">
+            <form asp-action="Create">
+                <div class="card-header">
+                    <h5>Incluir marca</h5>
+                </div>
+                <div class="card-body">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group form-row">
+                        <div class="col-md-2">
+                            <label asp-for="IdMarca" class="control-label"><b>Id</b></label>
+                            <input asp-for="IdMarca" class="form-control" />
                             <span asp-validation-for="IdMarca" class="text-danger"></span>
                         </div>
-                        <div class="form-group">
+                        <div class="col-md-10">
                             <label asp-for="DescMarca" class="control-label"></label>
                             <input asp-for="DescMarca" class="form-control" />
                             <span asp-validation-for="DescMarca" class="text-danger"></span>
                         </div>
-                        <div class="form-group">
-                            <div class="checkbox">
-                                <label>
-                                    <input asp-for="Usacadmat" /> @Html.DisplayNameFor(model => model.Usacadmat)
-                                </label>
-                            </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input asp-for="Usacadmat" /> @Html.DisplayNameFor(model => model.Usacadmat)
+                            </label>
                         </div>
-                        <div class="form-group">
-                            <div class="checkbox">
-                                <label>
-                                    <input asp-for="Usacadveic" /> @Html.DisplayNameFor(model => model.Usacadveic)
-                                </label>
-                            </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input asp-for="Usacadveic" /> @Html.DisplayNameFor(model => model.Usacadveic)
+                            </label>
                         </div>
-                        <div class="form-group">
-                            <div class="checkbox">
-                                <label>
-                                    <input asp-for="Ativo" /> @Html.DisplayNameFor(model => model.Ativo)
-                                </label>
-                            </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input asp-for="Ativo" /> @Html.DisplayNameFor(model => model.Ativo)
+                            </label>
                         </div>
-                        <div class="form-group">
-                            <input type="submit" value="Create" class="btn btn-default" />
-                        </div>
-                    </form>
+                    </div>
                 </div>
-            </div>
+                <div class="card-footer">
+                    <input type="submit" value="Incluir" class="btn btn-primary" />
+                    <a asp-action="Index" class="btn btn-secondary">Fechar</a>
+                </div>
+            </form>
+        </div>       
 
-            <div>
-                <a asp-action="Index">Back to List</a>
-            </div>
-
-            @section Scripts {
-                @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-            }
-        </div>
+        @section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }
     </div>
+
 </div>
