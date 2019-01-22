@@ -62,12 +62,12 @@
                                 @Html.DisplayFor(modelItem => item.Ativo)
                             </td>
                             <td>
-                                <a class="btn btn-sm btn-outline-success" asp-action="Edit" asp-route-id="@item.IdMarca">Editar</a>
+                                <a class="btn btn-sm btn-outline-success" asp-action="Edit" asp-route-id="@item.IdMarca"><i class="fas fa-edit"></i> Editar</a>
                                 <!--<a class="btn btn-sm btn-outline-info" data-toggle="modal" data-modal="@item.IdMarca" data-target="#myModal" asp-action="Details" asp-route-id="@item.IdMarca">Visualizar</a>-->
-                                <a href="#" class="btn btn-sm btn-outline-info btnDetails" data-value="@item.IdMarca">Detalhes</a>
+                                <a href="#" class="btn btn-sm btn-outline-info btnDetails" data-value="@item.IdMarca"><i class="fas fa-info-circle"></i> Detalhes</a>
                                 <!--<a class="btn btn-sm btn-outline-info" data-toggle="modal" data-modal="@item.IdMarca" data-target="#myModal2" asp-action="Details" asp-route-id="@item.IdMarca">Detalhes02</a>-->
                                 <!--<a class="btn btn-sm btn-outline-danger btnDelete" data-value="@item.IdMarca" asp-action="Delete" asp-route-id="@item.IdMarca">Excluir</a>-->
-                                <a href="#" class="btn btn-sm btn-outline-danger btnDelete" data-value="@item.IdMarca">Excluir </a>
+                                <a href="#" class="btn btn-sm btn-outline-danger btnDelete" data-value="@item.IdMarca"><i class="fas fa-trash-alt"></i> Excluir</a>
 
                             </td>
                         </tr>

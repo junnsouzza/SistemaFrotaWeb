@@ -26,8 +26,11 @@
         <div class="modal-footer">
             <form asp-action="Delete">
                 <input type="hidden" asp-for="IdMarca" />
-                <input type="submit" value="Excluir" class="btn btn-danger" />
-                <a asp-action="Index" class="btn btn-light">Cancelar</a>
+                <button type="submit" class="btn btn-danger">
+                    <i class="far fa-trash-alt"></i> Excluir
+                </button>
+                <!--<input type="submit" value="Excluir" class="btn btn-danger" />-->
+                <a asp-action="Index" class="btn btn-light"><i class="fas fa-times-circle"></i> Cancelar</a>
             </form>
         </div>
     </div>
